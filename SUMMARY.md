@@ -1,5 +1,4 @@
 # LTO Network
-* [](/.md)
 
 ### Overview
 
