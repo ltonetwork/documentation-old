@@ -55,4 +55,97 @@ A recipient that can be encoded either as pure address or alias. Both `Address` 
 | 9 + (K - 1)  | Generator's public key                                  | Bytes | 32     |
 | 10 + (K - 1) | Block's signature                                       | Bytes | 64     |
 
+Generation signature is calculated as Blake2b256 hash of the following bytes:
 
+| # | Field Name                            | Type  | Length |
+|---|:-------------------------------------:|:-----:|--------|
+| 1 | Previous block's generation signature | Bytes | 32     |
+| 2 | Generator's public key                | Bytes | 32     |
+
+Block's signature is calculated from the following bytes:
+
+| #            | Field Name                                              | Type  | Length |
+|--------------|:-------------------------------------------------------:|:-----:|--------|
+| 1            | Version (0x02 for Genesis block, 0x03 for common block) | Byte  | 0      |
+| 2            | Timestamp                                               | Long  | 1      |
+| 3            | Parent block signature                                  | Bytes | 64     |
+| 4            | Consensus block length (always 40 bytes)                | Int   | 4      |
+| 5            | Base target                                             | Long  | 8      |
+| 6            | Generation signature*                                   | Bytes | 32     |
+| 7            | Transactions block length (N)                           | Int   | 8      |
+| 8            | Transaction #1 bytes                                    | Bytes | M1     |
+| ...          | ...                                                     | ...   | ...    |
+| 8 + (K - 1)  | Transaction #K bytes                                    | Bytes | MK     |
+| 9 + (K - 1)  | Generator's public key                                  | Bytes | 32     |
+
+## Transactions
+
+### Transaction types
+
+| Tx type # | Tx type name            |
+|-----------|-------------------------|
+| 1         | GenesisTransaction      |
+| 2         | TransferTransaction     |
+| 3         | LeaseTransaction        |
+| 4         | LeaseCancelTransaction  |
+| 5         | MassTransferTransaction |
+
+### Genesis Transaction
+
+| # | Field Name          | Type                     | Length |
+|---|:-------------------:|:------------------------:|--------|
+| 1 | Transaction type    | Byte (constant, value=1) | 1      |
+| 2 | Timestamp           | Long                     | 8      |
+| 3 | Recipient's address | Address                  | 26     |
+| 4 | Amount              | Long                     | 8      |
+
+### Transfer Transaction
+
+| #  | Field Name            | Type                           | Length                                     |
+|----|:---------------------:|:------------------------------:|--------------------------------------------|
+| 1  | Transaction type      | Byte (constant, value=4)       | 1                                          |
+| 2  | Signature             | ByteStr (Array[Byte])          | 64                                         |
+| 3  | Transaction type      | Byte (constant, value=4)       | 1                                          |
+| 4  | Sender's public key   | PublicKeyAccount (Array[Byte]) | 32                                         |
+| 5  | Timestamp             | Long                           | 8                                          |
+| 6  | Amount                | Long                           | 8                                          |
+| 7  | Fee                   | Long                           | 8                                          |
+| 8  | Recipient             | Address or Alias               | depends on first byte (1-Address, 2-Alias) |
+| 9  | Attachment length (N) | Short                          | 2                                          |
+| 10 | Attachment            | Array[Byte]                    | N                                          |
+
+The transaction's signature is calculated from the following bytes:
+
+| # | Field Name            | Type                           | Length                                     |
+|---|:---------------------:|:------------------------------:|--------------------------------------------|
+| 1 | Transaction type      | Byte (constant, value=4)       | 1                                          |
+| 2 | Sender's public key   | PublicKeyAccount (Array[Byte]) | 32                                         |
+| 3 | Timestamp             | Long                           | 8                                          |
+| 4 | Amount                | Long                           | 8                                          |
+| 5 | Fee                   | Long                           | 8                                          |
+| 6 | Recipient             | Address or Alias               | depends on first byte (1-Address, 2-Alias) |
+| 7 | Attachment length (N) | Short                          | 2                                          |
+| 8 | Attachment            | Array[Byte]                    | N                                          |
+
+### Lease Transaction
+
+| # | Field Name          | Type                          | Length                                     |
+|---|:-------------------:|:-----------------------------:|--------------------------------------------|
+| 1 | Transaction type    | Byte (constant, value=8)      | 1                                          |
+| 2 | Sender's public key | PublicKeyAccount(Array[Byte]) | 32                                         |
+| 3 | Recipient           | Address or Alias              | depends on first byte (1-Address, 2-Alias) |
+| 4 | Amount              | Long                          | 8                                          |
+| 5 | Fee                 | Long                          | 8                                          |
+| 6 | Timestamp           | Long                          | 8                                          |
+| 7 | Signature           | ByteStr (Array[Byte])         | 64                                         |
+
+The transaction's signature is calculated from the following bytes:
+
+| # | Field Name          | Type                          | Length                                     |
+|---|:-------------------:|:-----------------------------:|--------------------------------------------|
+| 1 | Transaction type    | Byte (constant, value=8)      | 1                                          |
+| 2 | Sender's public key | PublicKeyAccount(Array[Byte]) | 32                                         |
+| 3 | Recipient           | Address or Alias              | depends on first byte (1-Address, 2-Alias) |
+| 4 | Amount              | Long                          | 8                                          |
+| 5 | Fee                 | Long                          | 8                                          |
+| 6 | Timestamp           | Long                          | 8                                          |
