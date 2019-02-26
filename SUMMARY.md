@@ -51,12 +51,21 @@
 
 ### LTO Full Node
 
-* [Installation](lto_full_node/intallation.md)
+* [Requirements](lto_full_node/requirements.md)
+* [Configuration](lto_full_node/configuration.md)
+* [(Virtual) Machine](lto_full_node/virtual_machine.md)
+* [AWS Elastic Beanstalk](lto_full_node/aws_elastic_beanstalk.md)
 
 ### LTO Anchoring Node
 
-* [Installation](lto_anchoring_node/intallation.md)
+* [Requirements](lto_anchoring_node/requirements.md)
+* [Configuration](lto_anchoring_node/configuration.md)
+* [(Virtual) Machine](lto_anchoring_node/virtual_machine.md)
+* [AWS Elastic Beanstalk](lto_anchoring_node/aws_elastic_beanstalk.md)
 
 ### LTO Public Node
 
-* [Installation](lto_public_node/intallation.md)
+* [Requirements](lto_public_node/requirements.md)
+* [Configuration](lto_public_node/configuration.md)
+* [(Virtual) Machine](lto_public_node/virtual_machine.md)
+* [AWS Elastic Beanstalk](lto_public_node/aws_elastic_beanstalk.md)
