@@ -129,23 +129,54 @@ The transaction's signature is calculated from the following bytes:
 
 ### Lease Transaction
 
-| # | Field Name          | Type                          | Length                                     |
-|---|:-------------------:|:-----------------------------:|--------------------------------------------|
-| 1 | Transaction type    | Byte (constant, value=8)      | 1                                          |
-| 2 | Sender's public key | PublicKeyAccount(Array[Byte]) | 32                                         |
-| 3 | Recipient           | Address or Alias              | depends on first byte (1-Address, 2-Alias) |
-| 4 | Amount              | Long                          | 8                                          |
-| 5 | Fee                 | Long                          | 8                                          |
-| 6 | Timestamp           | Long                          | 8                                          |
-| 7 | Signature           | ByteStr (Array[Byte])         | 64                                         |
+| # | Field Name          | Type                           | Length                                     |
+|---|:-------------------:|:------------------------------:|--------------------------------------------|
+| 1 | Transaction type    | Byte (constant, value=8)       | 1                                          |
+| 2 | Sender's public key | PublicKeyAccount (Array[Byte]) | 32                                         |
+| 3 | Recipient           | Address or Alias               | depends on first byte (1-Address, 2-Alias) |
+| 4 | Amount              | Long                           | 8                                          |
+| 5 | Fee                 | Long                           | 8                                          |
+| 6 | Timestamp           | Long                           | 8                                          |
+| 7 | Signature           | ByteStr (Array[Byte])          | 64                                         |
 
 The transaction's signature is calculated from the following bytes:
 
-| # | Field Name          | Type                          | Length                                     |
-|---|:-------------------:|:-----------------------------:|--------------------------------------------|
-| 1 | Transaction type    | Byte (constant, value=8)      | 1                                          |
-| 2 | Sender's public key | PublicKeyAccount(Array[Byte]) | 32                                         |
-| 3 | Recipient           | Address or Alias              | depends on first byte (1-Address, 2-Alias) |
-| 4 | Amount              | Long                          | 8                                          |
-| 5 | Fee                 | Long                          | 8                                          |
-| 6 | Timestamp           | Long                          | 8                                          |
+| # | Field Name          | Type                           | Length                                     |
+|---|:-------------------:|:------------------------------:|--------------------------------------------|
+| 1 | Transaction type    | Byte (constant, value=8)       | 1                                          |
+| 2 | Sender's public key | PublicKeyAccount (Array[Byte]) | 32                                         |
+| 3 | Recipient           | Address or Alias               | depends on first byte (1-Address, 2-Alias) |
+| 4 | Amount              | Long                           | 8                                          |
+| 5 | Fee                 | Long                           | 8                                          |
+| 6 | Timestamp           | Long                           | 8                                          |
+
+### Lease Cancel Transaction
+
+| # | Field Name          | Type                          | Length |
+|---|:-------------------:|:-----------------------------:|--------|
+| 1 | Transaction type    | Byte (constant, value=9)      | 1      |
+| 2 | Sender's public key | PublicKeyAccount (Array[Byte]) | 32     |
+| 3 | Fee                 | Long                          | 8      |
+| 4 | Timestamp           | Long                          | 8      |
+| 5 | Lease ID            | ByteStr (Array[Byte])         | 32     |
+| 6 | Signature           | ByteStr (Array[Byte])         | 64     |
+
+### Mass Transfer Transaction
+
+| #   | Field Name                      | Type                           | Length                                     |
+|-----|:-------------------------------:|:------------------------------:|--------------------------------------------|
+| 1   | Transaction type                | Byte (constant, value=11)      | 1
+| 2   | Version                         | Byte (constant, value=1)       | 1
+| 3   | Sender's public key             | PublicKeyAccount (Array[Byte]) | 32
+| 4.1 | Number of transfers             | Short                          | 2
+| 4.2 | Address or alias for transfer 1 | Address or Alias               | depends on first byte (1-Address, 2-Alias)
+| 4.3 | Amount of transfer 1            | Long                           | 8
+| 4.4 | Address or alias for transfer 2 | Address or Alias               | depends on first byte (1-Address, 2-Alias)
+| 4.5 | Amount of transfer 2            | Long                           | 8
+| ... | ...                             | ...                            | ...
+| 5   | Timestamp                       | Long                           | 8
+| 6   | Fee                             | Long                           | 8
+| 7.1 | Attachments length (N)          | Short                          | 2
+| 7.2 | Attachments                     | Array[Byte]                    | N
+
+
