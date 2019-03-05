@@ -89,6 +89,7 @@ Block's signature is calculated from the following bytes:
 | 3         | LeaseTransaction        |
 | 4         | LeaseCancelTransaction  |
 | 5         | MassTransferTransaction |
+| 6         | DataTransaction         |
 
 ### Genesis Transaction
 
@@ -152,14 +153,14 @@ The transaction's signature is calculated from the following bytes:
 
 ### Lease Cancel Transaction
 
-| # | Field Name          | Type                          | Length |
-|---|:-------------------:|:-----------------------------:|--------|
-| 1 | Transaction type    | Byte (constant, value=9)      | 1      |
+| # | Field Name          | Type                           | Length |
+|---|:-------------------:|:------------------------------:|--------|
+| 1 | Transaction type    | Byte (constant, value=9)       | 1      |
 | 2 | Sender's public key | PublicKeyAccount (Array[Byte]) | 32     |
-| 3 | Fee                 | Long                          | 8      |
-| 4 | Timestamp           | Long                          | 8      |
-| 5 | Lease ID            | ByteStr (Array[Byte])         | 32     |
-| 6 | Signature           | ByteStr (Array[Byte])         | 64     |
+| 3 | Fee                 | Long                           | 8      |
+| 4 | Timestamp           | Long                           | 8      |
+| 5 | Lease ID            | ByteStr (Array[Byte])          | 32     |
+| 6 | Signature           | ByteStr (Array[Byte])          | 64     |
 
 ### Mass Transfer Transaction
 
@@ -180,3 +181,24 @@ The transaction's signature is calculated from the following bytes:
 | 7.2 | Attachments                     | Array[Byte]                    | N
 
 
+|` #   | Field Name                                                              | Type                             | Length               |
+|-----|:-----------------------------------------------------------------------:|:------------------------------:  |-----------------------|
+| 1   | Transaction multiple version mark                                       | Byte \(constant, value = 0\)     | 1                     |
+| 2   | Transaction type                                                        | Byte \(constant, value = 12\)    | 1                     |
+| 3   | Version                                                                 | Byte                             | 1                     |
+| 4   | Sender's public key                                                     | PublicKeyAccount \(Array[Byte]\) | 32                    |
+| 5.1 | Data entries count                                                      | Short                            | 2                     |
+| 5.2 | Key 1 length \(K1\)                                                     | Short                            | 2                     |
+| 5.3 | Key 1 bytes                                                             | UTF-8 encoded                    | K1                    |
+| 5.4 | Value 1 type \(0 = integer, 1 = boolean, 2 = binary array, 3 = string\) | Byte                             | 1                     |
+| 5.5 | Value 1 bytes                                                           | Value 1 type                     | depends on value type |
+| ... | ...                                                                     | ...                              | ...                   |
+| 6   | Timestamp                                                               | Long                             | 8                     |
+| 7   | Fee                                                                     | Long                             | 8                     |
+| 8.1 | Proofs version \(1\)                                                    | Byte                             | 1                     |
+| 8.2 | Proofs count                                                            | Short                            | 2                     |
+| 8.3 | Proof 1 length \(P1\)                                                   | Short                            | 2                     |
+| 8.4 | Proof 1                                                                 | ByteStr \(Array[Byte]\)          | P1                    |
+| 8.5 | Proof 2 length \(P2\)                                                   | Short                            | 2                     |
+| 8.6 | Proof 2                                                                 | ByteStr \(Array[Byte]\)          | P2                    |
+| ... | ...                                                                     | ...                              | ...                   |

@@ -1,4 +1,4 @@
-# **1. Scalability Limits and Challenges in Current Blockchain Systems** {#Waves-NGProtocol-1.ScalabilityLimitsandChallengesinCurrentBlockchainSystems}
+# **1. Scalability Limits and Challenges in Current Blockchain Systems** {#NGProtocol-1.ScalabilityLimitsandChallengesinCurrentBlockchainSystems}
 
 ## **1.1 Problem Statement and Motivation** {#Waves-NGProtocol-1.1ProblemStatementandMotivation}
 
@@ -9,7 +9,7 @@ There is a united agreement between miners, consumers, and developers with sever
 All proposals suffer from a major scalability bottleneck:  
 no matter what block size is chosen, the blockchain system can at best reach a proper transaction throughput, increasing from ~3 transactions per second to ~7 transactions per second. This is so far from the 30,000 transactions per second which necessary to compete with the existing systems such as VISA transactions. The same major limitations apply to litecoin, Ethereum, and all other currencies that share Bitcoin’s blockchain protocol.
 
-Waves-NG will address the scalability bottleneck by making the network to reach the highest throughput depends on the network conditions. It will not only enhance the transaction throughput, it will also reduce transaction latencies. So it will be possible to get an initial transaction confirmation in seconds rather than in minutes.
+NG will address the scalability bottleneck by making the network to reach the highest throughput depends on the network conditions. It will not only enhance the transaction throughput, it will also reduce transaction latencies. So it will be possible to get an initial transaction confirmation in seconds rather than in minutes.
 
 |  | Latency\(Block Interval\) | Block Size | Speed |
 | :--- | :--- | :--- | :--- |
@@ -22,7 +22,7 @@ Table1, Scalability comparison between Bitcoin, Ethereum, Waves and Waves-NG.
 
 ![](/_assets/waves_dex_ng.jpg)
 
-## **1.2 Weaknesses of Current Proposals to Improve Scalability** {#Waves-NGProtocol-1.2WeaknessesofCurrentProposalstoImproveScalability}
+## **1.2 Weaknesses of Current Proposals to Improve Scalability** {#NGProtocol-1.2WeaknessesofCurrentProposalstoImproveScalability}
 
 Blockchain Systems can process transactions and the maximum rate of these transactions is limited by the choice of two parameters: block size and block interval.
 
@@ -40,7 +40,7 @@ Figure1, Increasing block frequency with Static blocksize will result to less se
 
 Figure2, Increasing block size with Static block frequency will lead to more discarded blocks and network spikes.
 
-## **1.3 Brief Summary of Bitcoin-NG** {#Waves-NGProtocol-1.3BriefSummaryofBitcoin-NG}
+## **1.3 Brief Summary of Bitcoin-NG** {#NGProtocol-1.3BriefSummaryofBitcoin-NG}
 
 It is a next-generation blockchain protocol which is an alternative bitcoin scaling solution that does not involve increasing the size of blocks or decreasing the block time interval. This reduces the risk of forks amongst other advantages. Bitcoin-NG describes that the basic tradeoffs in Bitcoin can be reduced with an alternative blockchain protocol, offering a consensus delay and bandwidth limited only by the Network Plane. The protocol splits time into time periods\(epoch\). In each time period, a particular leader is responsible for serializing transactions \(Figure 3\).
 
@@ -53,7 +53,7 @@ The leaders take the rule of generating blocks:
 
 Figure 3: Bitcoin-NG time periods structure with serializing transactions.
 
-# **2. Waves-NG Overlay** {#Waves-NGProtocol-2.Waves-NGOverlay}
+# **2. Waves-NG Overlay** {#NGProtocol-2.Waves-NGOverlay}
 
 Waves-NG is based on bitcoin next generation protocol that serializes transactions and offers important improvements in the transaction latency\(lower latency\) and bandwidth\(higher throughput\) in comparison to Bitcoin without sacrificing other properties.
 
@@ -63,7 +63,7 @@ This approach increases effective bandwidth and speed of block creation, which i
 
 Furthermore, it allows the platform to withstand high loads, such as distribution of tokens following crowdsales and airdrops of bonus tokens. The speed of processing trading transactions on Waves decentralized exchange \(DEX\) is increased as well.
 
-## **2.1 Waves-NG operations** {#Waves-NGProtocol-2.1Waves-NGoperations}
+## **2.1 Waves-NG operations** {#NGProtocol-2.1Waves-NGoperations}
 
 The main and core idea of Waves-NG is to split the Liquid block into two types, Key blocks and Micro blocks. The process of creating liquid block works as follows:
 
@@ -83,7 +83,7 @@ Following the key-block, the lead miner can quickly issue microblocks, simply by
 
 Figure 4: Key-blocks and Micro-blocks signing process.
 
-## **2.1.1 Leader blocks** {#Waves-NGProtocol-2.1.1Leaderblocks}
+## **2.1.1 Leader blocks** {#NGProtocol-2.1.1Leaderblocks}
 
 It's also called "Key Blocks", these blocks are generated with proof of stake but does not contain transactions.
 
@@ -93,7 +93,7 @@ Each block has a header that contains, among other fields, the unique reference 
 
 As in Bitcoin, for a key block to be valid, the cryptographic hash of its header must be smaller than the target value. Unlike Bitcoin, a key block contains a public key that will be used in subsequent microblocks.
 
-## **2.1.2 Micro blocks** {#Waves-NGProtocol-2.1.2Microblocks}
+## **2.1.2 Micro blocks** {#NGProtocol-2.1.2Microblocks}
 
 Once a node generates a key block it becomes the leader. As a leader, the node is allowed to generate microblocks at a set rate smaller than a predefined maximum.
 
@@ -110,7 +110,7 @@ Note that microblocks do not affect the weight of the chain, as they do not cont
 
 When all micro blocks have been validated, they will be merged with their key block into one block.
 
-## **2.2 Waves-NG reward mechanisms** {#Waves-NGProtocol-2.2Waves-NGrewardmechanisms}
+## **2.2 Waves-NG reward mechanisms** {#NGProtocol-2.2Waves-NGrewardmechanisms}
 
 Remuneration is comprised of two parts. First, each key block entitles its generator a set amount. Second, each ledger entry carries a fee.
 
