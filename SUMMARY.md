@@ -24,6 +24,7 @@
   * [NG Solution](lto_environment/lto_protocol/ng_solution.md)
   * [Transaction Structure](lto_environment/lto_protocol/transaction_structure.md)
   * [Transaction Fees](lto_environment/lto_protocol/transaction_fees.md)
+  * [Transaction Examples](lto_environment/lto_protocol/tranaction_examples.md)
   * [Leased Proof of Stake \(LPoS\)](lto_environment/lto_protocol/leased_proof_of_stake_\(lpos\).md)
   * [Fair Proof of Stake \(FPoS\)](lto_environment/lto_protocol/fair_proof_of_stake_\(fpos\).md)
   * [Leased Proof of Importance \(LPoI\)](lto_environment/lto_protocol/leased_proof_of_importance_\(LPoI\).md)
