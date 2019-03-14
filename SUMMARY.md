@@ -46,6 +46,13 @@
 ### LTO API & SDK
 
 * [LTO Node Rest API](lto_api_sdk/lto_node_rest_api.md)
+  * [Address](lto_api_sdk/lto_node_rest_api/address.md)
+  * [Lease Transactions](lto_api_sdk/lto_node_rest_api/lease_transactions.md)
+  * [Transactions](lto_api_sdk/lto_node_rest_api/transactions.md)
+  * [Peers](lto_api_sdk/lto_node_rest_api/peers.md)
+  * [Blocks](lto_api_sdk/lto_node_rest_api/blocks.md)
+  * [Utils](lto_api_sdk/lto_node_rest_api/utils.md)
+  * [Example Transactions](lto_api_sdk/lto_node_rest_api/example_transactions.md)
 * [Examples](lto_api_sdk/examples.md)
 * [FAQ](lto_api_sdk/faq.md)
 
