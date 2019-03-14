@@ -5,8 +5,7 @@ LTO Network is hybrid blockchain solution for decentralized workflows. It enable
 
 # Main LTO Network Features
 
-* 1
-* 2
-* 3
-* 4
-* 5
+* _**Anchoring**_ for proof of existance on the public chain.
+* _**Ad-hoc private chains**_ for decentralized, GDPR-compliant workflows.
+* _**Waves-NG protocol**_ which greatly increases TPS capacity because miners no longer compete to verify transactions.
+* _**Fair Proof-of-Stake(FPoS)**_ algorithm to find a ditributed concensus. _(Lease Proof-of-Importance coming soon)_

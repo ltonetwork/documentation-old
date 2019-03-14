@@ -3,6 +3,9 @@
 ### Overview
 
 * [Security Notes](overview/security_notes.md)
+* [Official Resources](overview/official_resources.md)
+* [Developer Resources](overview/developer_resources.md)
+* [Contributing](overview/contributing.md)
 
 ### LTO Environment
 
