@@ -7,7 +7,7 @@ The maximum rate of transactions in blockchain systems is limited by the choice 
 
 **Note. **Find How NG Protocol works [**here.**](../platform-features/ng-protocol.md)
 
-# 1.1 NG Solution With Technical Details
+# 1.1 Waves-NG Solution With Technical Details
 
 LTO addresses this issue by allowing the miner to continuously farm a block during the time of mining. This continuously increasing block is called liquid block, which becomes immutable when next block referencing it is built and appended. A liquid block consists of a key block and chain of microblocks. The process of creating liquid block goes as follows:
 
@@ -42,7 +42,7 @@ Next miner can reference **ANY **of these ids in its_keyBlock_.
 
 # 2. Economy
 
-For a miner, it might seem a good idea to reference`KEYBLOCK`from previous example and pack all txs from microblocks to its own \(micro\)block\(s\). In order to make 'stealing' transactions less profitable than referencing the best-known version of liquid block\(= the last known microblock\), we change the mechanics of fees: After activating NG, miner will receive 40% of fees from the block it creates and 60% of fees from the block he references.
+For a miner, it might seem a good idea to reference`KEYBLOCK`from previous example and pack all txs from microblocks to its own \(micro\)block\(s\). In order to make 'stealing' transactions less profitable than referencing the best-known version of liquid block\(= the last known microblock\), we change the mechanics of fees: The miner will receive 40% of fees from the block it creates and 60% of fees from the block he references.
 
 # 3. Related Protocol Changes
 

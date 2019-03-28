@@ -8,7 +8,7 @@ Produce a secure hash of a specified message.
 **Request:**
 
 ```
-ridethewaves!
+ltonetwork!
 
 ```
 
@@ -16,7 +16,7 @@ ridethewaves!
 
 ```js
 {
-  "message": "ridethewaves!",
+  "message": "ltonetwork!",
   "hash": "H6nsiifwYKYEx6YzYD7woP1XCn72RVvx6tC1zjjLXqsu"
 }
 
@@ -32,7 +32,7 @@ Fast hash of specified message.
 **Request:**
 
 ```
-ridethewaves!
+ltonetwork!
 
 ```
 
@@ -40,7 +40,7 @@ ridethewaves!
 
 ```js
 {
-  "message": "ridethewaves!",
+  "message": "ltonetwork!",
   "hash": "DJ35ymschUFDmqCnDJewjcnVExVkWgX7mJDXhFy9X8oQ"
 }
 
