@@ -16,7 +16,6 @@ _**STILL NEEDS LINKS TO EXAMPLE TRANSACTIONS**_
 | 9 | Lease Cancel | |
 | 11 | Mass Transfer | |
 | 12 | Data | |
-| 13 | Set Script | |
 
 ### Mainnet
 
@@ -27,7 +26,6 @@ _**STILL NEEDS LINKS TO EXAMPLE TRANSACTIONS**_
 | 9 | Lease Cancel | |
 | 11 | Mass Transfer | |
 | 12 | Data | |
-| 13 | Set Script | |
 
 ## V2 transactions
 
