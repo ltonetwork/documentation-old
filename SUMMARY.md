@@ -8,9 +8,6 @@
 
 * [LTO Mainnet](lto_environment/lto_mainnet.md)
 * [LTO Testnet](lto_environment/lto_testnet.md)
-* [LTO Tokens](lto_environment/lto_tokens.md)
-* [LTO ERC-20](lto_environment/lto_erc-20.md)
-* [LTO Troll Bridge](lto_environment/lto_troll_bridge.md)
 * [LTO Protocol](lto_environment/lto_protocol.md)
   * [Cryptographic Details](lto_environment/lto_protocol/cryptographic_details.md)
   * [Data Structures](lto_environment/lto_protocol/data_structures.md)
