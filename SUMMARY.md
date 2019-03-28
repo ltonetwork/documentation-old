@@ -3,7 +3,6 @@
 ### Overview
 
 * [Security Notes](overview/security_notes.md)
-* [Contributing](overview/contributing.md)
 
 ### LTO Environment
 
@@ -30,12 +29,6 @@
 * [Configuration](lto_node/configuration.md)
 * [(Virtual) Machine](lto_node/virtual_machine.md)
 * [AWS Elastic Beanstalk](lto_node/aws_elastic_beanstalk.md)
-
-### Getting Started
-
-* [As a Developer](getting_started/as_a_developer.md)
-* [As a Node Owner](getting_started/as_a_node_owner.md)
-* [As a User](getting_started/as_a_user.md)
 
 ### LTO API & SDK
 
