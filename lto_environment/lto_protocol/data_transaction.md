@@ -76,7 +76,7 @@ Fee is proportional to transaction size. Minimal fee is 100,000 per kilobyte, ro
     {"key": "int", "type": "integer", "value": 24},
     {"key": "bool", "type": "boolean", "value": true},
     {"key": "blob", "type": "binary", "value": "base64:BzWHaQU"}
-    {"key": "My poem", "type": "string", "value": "Oh waves!"}
+    {"key": "My poem", "type": "string", "value": "Oh Oh LTO!"}
   ],
   "fee": 100000
 }
@@ -99,7 +99,7 @@ Fee is proportional to transaction size. Minimal fee is 100,000 per kilobyte, ro
 }, {
   "key": "My poem",
   "type": "string",
-  "value": "Oh LTO!"
+  "value": "Oh Oh LTO!"
 } ]
 ```
 
@@ -141,7 +141,7 @@ Fee is proportional to transaction size. Minimal fee is 100,000 per kilobyte, ro
   }, {
     "key" : "My poem",
     "type" : "string",
-    "value" : "Oh waves!"
+    "value" : "Oh Oh LTO!"
   } ],
   "version" : 1,
   "height" : 303

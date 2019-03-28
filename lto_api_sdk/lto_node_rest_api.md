@@ -2,13 +2,11 @@
 
 1. [Address](/lto_api_sdk/lto_node_rest_api/address.md)
 2. [Lease Transactions](/lto_api_sdk/lto_node_rest_api/lease-transactions.md)
-3. [Asset Transactions](/lto_api_sdk/lto_node_rest_api/asset-transactions.md)
-4. [Alias Transaction](/lto_api_sdk/lto_node_rest_api/alias-transaction.md)
-5. [Transactions](/lto_api_sdk/lto_node_rest_api/transactions.md)
-6. [Peers](/lto_api_sdk/lto_node_rest_api/peers.md)
-7. [Blocks](/lto_api_sdk/lto_node_rest_api/blocks.md)
-8. [Utils](/lto_api_sdk/lto_node_rest_api/utils.md)
-9. [Examples of Transactions](/lto_api_sdk/lto_node_rest_api/example-transactions.md)
+3. [Transactions](/lto_api_sdk/lto_node_rest_api/transactions.md)
+4. [Peers](/lto_api_sdk/lto_node_rest_api/peers.md)
+5. [Blocks](/lto_api_sdk/lto_node_rest_api/blocks.md)
+6. [Utils](/lto_api_sdk/lto_node_rest_api/utils.md)
+7. [Examples of Transactions](/lto_api_sdk/lto_node_rest_api/example-transactions.md)
 
 # LTO Node Rest API
 

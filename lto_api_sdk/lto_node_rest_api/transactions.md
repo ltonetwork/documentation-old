@@ -159,7 +159,6 @@ Calculates a fee for an arbitrary transaction and returns it. The transaction ty
 | 9 | Lease Cancel |
 | 11 | Mass Transfer |
 | 12 | Data |
-| 13 | Set Script |
 
 **Request params**
 
@@ -214,7 +213,6 @@ Signs an arbitrary transaction. This requires an API key, and transaction type t
 | 9 | Lease Cancel |
 | 11 | Mass Transfer |
 | 12 | Data |
-| 13 | Set Script |
 
 An optional `timestamp` parameter may be specified, which represents transaction timestamp in milliseconds. If it is omitted, current server time is used.
 
@@ -272,7 +270,7 @@ or
 
 Signs an arbitrary transaction by a private key of signer. This requires an API key, a signer address and transaction type to be specified in the request body.
 
-`signerAddress` should be created by [POST /addresses](https://docs.wavesplatform.com/development-and-api/waves-node-rest-api/address.html#post-addresses).
+`signerAddress` should be created by [POST /addresses](/lto_sdk_api/lto_node_rest_api/address.md).
 
 The types are as follows:
 
@@ -283,7 +281,6 @@ The types are as follows:
 | 9 | Lease Cancel |
 | 11 | Mass Transfer |
 | 12 | Data |
-| 13 | Set Script |
 
 An optional `timestamp` parameter may be specified, which represents transaction timestamp in milliseconds. If it is omitted, current server time is used.
 

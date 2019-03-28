@@ -4,10 +4,10 @@ Transaction fees act as a reward for the miner. Because these are the only rewar
 
 | Transcation   | Fee (LTO)          |
 |---------------|--------------------|
-| Transfer      | 0.25               |
+| Transfer      | 1               |
 | Lease         | 0.25               |
 | Cancel Lease  | 0.25               |
-| Mass Transfer | 0.25 + 0.1 * N[^1] |
+| Mass Transfer | 1 + 0.1 * N[^1] |
 | Data          | 0.25               |
 
 [^1]: N is the number of transfers within the mass tranfer transaction.

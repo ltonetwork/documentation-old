@@ -1,9 +1,9 @@
 ## Contributing
 
-Keep up with the latest news and articles, and find out all about events happening on the [_**Waves Platform**_](https://wavesplatform.com/).
+Keep up with the latest news and articles, and find out all about events happening on [_**LTO Network**_](https://www.lto.network).
 
-* [_**Telegram Community Group**_](https://discord.gg/cnFmDyA)
-* [_**Telegram Announcement Channel**_](https://forum.wavesplatform.com/)
+* [_**Telegram Community Group**_](https://t.me/LTONetwork/)
+* [_**Telegram Announcement Channel**_](https://t.me/ltoinfo/)
 * [_**Community Portal**_](https://community.lto.network)
 * [_**Website**_](https://lto.network/)
 
